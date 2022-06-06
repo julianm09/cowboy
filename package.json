@@ -10,8 +10,9 @@
   "dependencies": {
     "@react-three/drei": "^8.3.1",
     "@react-three/fiber": "^7.0.24",
+    "framer-motion": "^6.3.10",
     "lerp": "^1.0.3",
-    "next": "12.0.7",
+    "next": "12.1.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-feather": "^2.0.9",

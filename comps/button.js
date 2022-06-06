@@ -1,28 +1,32 @@
-import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
+import { useTheme } from "../utils/provider";
+import { sizes } from "../utils/variables";
+import { themes } from "../utils/variables";
 
-export default function Button() {
-  return <ButtonUI>Get a Quote</ButtonUI>;
-}
+export const Button = ({ style = {}, text = "Contact Us" }) => {
+  const { theme } = useTheme();
+  return (
+    <Container
+      sizes={sizes}
+      style={style}
+      background={themes[theme].secondary}
+      color={themes[theme].primary}
+    >
+      {text}
+    </Container>
+  );
+};
 
-const ButtonUI = styled.div`
+const Container = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 5px;
-  width: 150px;
-  color: #4f4f4f;
+  align-items: center;
   border-radius: 50px;
-  border: 1px solid #4f4f4f;
-  font-family: europa, sans-serif;
+  background: white;
+  flex-direction: column;
+  background: ${(props) => props.background};
+  color: ${(props) => props.color};
+  width: 200px;
+  height: 40px;
   cursor: pointer;
-  transition: 0.2s ease;
-  font-size: 16px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  &:hover {
-    box-shadow: 0px 0px 20px #4f4f4f;
-  }
 `;

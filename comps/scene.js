@@ -4,8 +4,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import Cactus from "../public/Cactus";
 import useScrollTop from "../hooks/useScrollTop";
 import { PerspectiveCamera } from "@react-three/drei";
+import { themes } from "../utils/variables";
+import { useTheme } from "../utils/provider";
 
 export default function Scene({ scrollTop, position, windowSize }) {
+  const { theme } = useTheme();
+
   return (
     <Canvas
       style={{
@@ -14,7 +18,7 @@ export default function Scene({ scrollTop, position, windowSize }) {
         position: "fixed",
         top: 0,
         zIndex: -100,
-        background: "#fef1dc",
+        background: themes[theme].primary,
       }}
     >
       <Suspense fallback={null}>
@@ -22,16 +26,15 @@ export default function Scene({ scrollTop, position, windowSize }) {
           fov={75}
           makeDefault
           rotation={
-            windowSize.width > 500
+            /*             windowSize.width > 500
               ? [
                   0.1 + -position.y / windowSize.height / 5,
                   0.25 + -position.x / windowSize.width / 2.5,
                   0,
                 ]
-              : [0, 0, 0]
+              :  */ [0, 0, 0]
           }
-          position={windowSize.width > 500 
-            ? [0, 0, 0] : [0, 0, 10]}
+          position={windowSize.width > 500 ? [0, 0, 0] : [0, 0, 10]}
         />
         <ambientLight />
         <pointLight position={[-10, -10, 10]} />

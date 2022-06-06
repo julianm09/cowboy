@@ -1,11 +1,15 @@
-import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
-import Button from "../comps/button";
 import Cursor from "../comps/Cursor";
 import Scene from "../comps/Scene";
 import useScrollTop from "../hooks/useScrollTop";
 import useWindowSize from "../hooks/useWindowSize";
+import { H1 } from "../comps/text/H1";
+import { Section } from "../comps/Section";
+import { Header } from "../comps/Header";
+import { Grid } from "../comps/Grid";
+import { Card } from "../comps/Card";
+import { Button } from "../comps/Button";
+import { Text } from "../comps/text/Text";
 
 import { useState, useEffect } from "react";
 
@@ -29,20 +33,31 @@ export default function Home() {
       />
 
       <Container>
-        <Section margin="100px 0 0 0">
-          <Header margin="0 0 20px 0">
-            We are a design focused digital agency, here to help you navigate
-            the <br />
-            wild wild west.
-          </Header>
+        <Header />
+        <Section style={{ marginTop: "100px", flexDirection: "column" }}>
+          <H1
+            text="Grow your business"
+            transition={{ delay: 0, duration: 1 }}
+          />
+          <H1
+            text="with the best"
+            style={{ marginBottom: "20px" }}
+            transition={{ delay: 0, duration: 1 }}
+          />
+          <Text
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua."
+            style={{ marginBottom: "60px" }}
+            transition={{ delay: 0.5, duration: 1 }}
+          />
           <Button />
         </Section>
-
-        <Section align="center">
-          <Header>
-            We specialize in branding, design, and websites for trailblazers who
-            want to stand apart from the crowd.
-          </Header>
+        <Section>
+          <Grid>
+            <Card />
+            <Card />
+            <Card />
+          </Grid>
         </Section>
       </Container>
     </>
@@ -50,32 +65,9 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   width: 100%;
-  color: #4f4f4f;
-`;
-
-const Section = styled.div`
-  width: 90%;
   min-height: 100vh;
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  justify-content: center;
-  align-items: ${(props) => props.align};
-  text-align: ${(props) => props.align};
-  margin: ${(props) => props.margin};
-
-  @media (max-width: 1000px) {
-    align-items: flex-start;
-    text-align: left;
-  }
-`;
-
-const Header = styled.div`
-  font-size: calc(32px + 1vw);
-  max-width: 650px;
-  margin: ${(props) => props.margin};
 `;

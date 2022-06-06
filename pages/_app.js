@@ -1,13 +1,12 @@
-import Header from '../comps/header'
-import '../styles/globals.css'
+import "../styles/globals.css";
+import AppProvider from "../utils/provider";
 
 function MyApp({ Component, pageProps }) {
   return (
-  <>
-  <Header/>
-  <Component {...pageProps} />
-  </>
-  )
+    <AppProvider>
+      <Component {...pageProps} />
+    </AppProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

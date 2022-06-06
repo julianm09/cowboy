@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React, { useState, useRef, useEffect } from "react";
-import { ArrowRight } from "react-feather";
 
 const CursorUI = styled.div`
   width: ${(props) => (props.hovering ? "30px" : "10px")};
