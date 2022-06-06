@@ -8,7 +8,7 @@ import { Button } from "../comps/Button";
 import { Text } from "../comps/text/Text";
 import { useState, useEffect } from "react";
 import { Scene } from "../comps/Scene";
-import { Cursor } from "../comps/cursor";
+import { Cursor } from "../comps/Cursor";
 
 
 export default function Home() {
