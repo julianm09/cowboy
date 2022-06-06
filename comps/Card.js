@@ -4,12 +4,12 @@ import { sizes } from "../utils/variables";
 import { themes } from "../utils/variables";
 import { Text } from "./text/Text";
 
-export const Card = ({ style = {} }) => {
+export const Card = ({ style = {}, text = "" }) => {
   const { theme } = useTheme();
   return (
     <Container sizes={sizes} style={style}>
       <Image src="/plant.jpg" />
-      <Text />
+      <Text text={text} />
     </Container>
   );
 };

@@ -27,6 +27,6 @@ const Cont = styled.div`
 `;
 
 const Paragraph = styled(motion.p)`
-  font-size: 16px;
-  font-weight: 400;
+  font-family: "GeneralSans-Medium", sans-serif;
+  font-size: 18px;
 `;

@@ -28,6 +28,7 @@ const Cont = styled.div`
 `;
 
 const Text = styled(motion.h1)`
+  font-family: "GeneralSans-Bold", sans-serif;
   font-size: calc(32px + 5vw);
   font-weight: 700;
 `;

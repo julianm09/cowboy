@@ -25,9 +25,11 @@ export const H2 = ({
 const Cont = styled.div`
   overflow: hidden;
   width: 100%;
+
 `;
 
-const Text = styled(motion.h1)`
+const Text = styled(motion.h2)`
+  font-family: "GeneralSans-Bold", sans-serif;
   font-size: calc(32px + 2.5vw);
   font-weight: 700;
   -webkit-text-fill-color: transparent;

@@ -21,7 +21,7 @@ export default function Home() {
   const windowSize = useWindowSize();
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [hovering] = useState(false);
-  const {theme} = useTheme();
+  const { theme } = useTheme();
 
   return (
     <>
@@ -77,20 +77,20 @@ export default function Home() {
           />
         </Section>
         <Section>
-          <ContactForm color={themes[theme]}/>
-        </Section>
-{/*         <Section>
           <H2
             text="Our Work"
             style={{ marginBottom: "40px" }}
             transition={{ delay: 0, duration: 1 }}
           />
           <Grid>
-            <Card />
-            <Card />
-            <Card />
+            <Card text=""/>
+            <Card text=""/>
+            <Card text=""/>
           </Grid>
-        </Section> */}
+        </Section>
+        <Section>
+          <ContactForm color={themes[theme]} />
+        </Section>
       </Container>
     </>
   );
