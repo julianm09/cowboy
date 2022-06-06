@@ -7,7 +7,7 @@ import { PerspectiveCamera } from "@react-three/drei";
 import { themes } from "../utils/variables";
 import { useTheme } from "../utils/provider";
 
-export default function Scene({ scrollTop, position, windowSize }) {
+export const Scene = ({ scrollTop, position, windowSize }) => {
   const { theme } = useTheme();
 
   return (

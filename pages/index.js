@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import Cursor from "../comps/Cursor";
-import Scene from "../comps/Scene";
 import useScrollTop from "../hooks/useScrollTop";
 import useWindowSize from "../hooks/useWindowSize";
 import { H1 } from "../comps/text/H1";
@@ -8,8 +6,10 @@ import { Section } from "../comps/Section";
 import { Header } from "../comps/Header";
 import { Button } from "../comps/Button";
 import { Text } from "../comps/text/Text";
-
 import { useState, useEffect } from "react";
+import { Scene } from "../comps/Scene";
+import { Cursor } from "../comps/cursor";
+
 
 export default function Home() {
   const scrollTop = useScrollTop();

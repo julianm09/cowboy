@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 
 const CursorUI = styled.div`
   width: ${(props) => (props.hovering ? "30px" : "10px")};
@@ -30,7 +30,7 @@ const ShadowUI = styled.div`
   align-items: center;
 `;
 
-const Cursor = ({ position, setPosition, hovering }) => {
+export const Cursor = ({ position, setPosition, hovering }) => {
   useEffect(() => {
     addEventListeners();
     return () => removeEventListeners();
@@ -59,5 +59,3 @@ const Cursor = ({ position, setPosition, hovering }) => {
     />
   );
 };
-
-export default Cursor;
