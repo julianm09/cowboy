@@ -6,8 +6,6 @@ import useWindowSize from "../hooks/useWindowSize";
 import { H1 } from "../comps/text/H1";
 import { Section } from "../comps/Section";
 import { Header } from "../comps/Header";
-import { Grid } from "../comps/Grid";
-import { Card } from "../comps/Card";
 import { Button } from "../comps/Button";
 import { Text } from "../comps/text/Text";
 
@@ -36,29 +34,27 @@ export default function Home() {
         <Header />
         <Section style={{ marginTop: "100px", flexDirection: "column" }}>
           <H1
-            text="Grow your business"
+            text="Helping you navigate"
             transition={{ delay: 0, duration: 1 }}
           />
           <H1
-            text="with the best"
+            text={
+              <>
+                the <Outline>w</Outline>ild <Outline>w</Outline>ild{" "}
+                <Outline>w</Outline>est.
+              </>
+            }
             style={{ marginBottom: "20px" }}
             transition={{ delay: 0, duration: 1 }}
           />
           <Text
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua."
+            text="We are a digital design team focused on creating unique and interactive experiences for businesses."
             style={{ marginBottom: "60px" }}
             transition={{ delay: 0.5, duration: 1 }}
           />
           <Button />
         </Section>
-        <Section>
-          <Grid>
-            <Card />
-            <Card />
-            <Card />
-          </Grid>
-        </Section>
+        <Section></Section>
       </Container>
     </>
   );
@@ -70,4 +66,9 @@ const Container = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+`;
+
+const Outline = styled.span`
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px;
 `;

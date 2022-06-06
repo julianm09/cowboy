@@ -10,14 +10,14 @@ export const Text = ({
 }) => {
   return (
     <Cont>
-      <Para
+      <Paragraph
         style={style}
         initial={initial}
         animate={animate}
         transition={transition}
       >
         {text}
-      </Para>
+      </Paragraph>
     </Cont>
   );
 };
@@ -26,7 +26,7 @@ const Cont = styled.div`
   overflow: hidden;
 `;
 
-const Para = styled(motion.p)`
-  font-size: 16px;
+const Paragraph = styled(motion.p)`
+  font-size: 18px;
   font-weight: 400;
 `;

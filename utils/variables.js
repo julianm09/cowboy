@@ -2,13 +2,14 @@ export const themes = {
   default: {
     primary: "#fef1dc",
     secondary: "#46261F",
-    accent: "#006B52",
-    text: "",
+    accent: "#006244",
+    buttonText: "#fef1dc",
   },
   dark: {
     primary: "#46261F",
     secondary: "#fef1dc",
-    accent: "#006B52",
+    accent: "#006244",
+    buttonText: "#fef1dc",
   },
 };
 
