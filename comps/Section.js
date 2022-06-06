@@ -10,12 +10,14 @@ export const Section = ({ children, style = {} }) => {
 };
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin: 0 0 100px 0;
+  margin: 0 0 200px 0;
   padding: 0px 10%;
+  flex-direction: column;
 
-  @media (max-width: ${(props) => props.sizes.small}) {
-    flex-direction: column;
+  @media (max-width: ${(props) => props.sizes.medium}) {
+    padding: 0px 2.5%;
   }
 `;

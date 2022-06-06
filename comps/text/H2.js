@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Text = ({
+export const H2 = ({
   text = "Heading",
   style = {},
   initial = { y: 1000 },
@@ -10,23 +10,26 @@ export const Text = ({
 }) => {
   return (
     <Cont>
-      <Paragraph
+      <Text
         style={style}
         initial={initial}
         animate={animate}
         transition={transition}
       >
         {text}
-      </Paragraph>
+      </Text>
     </Cont>
   );
 };
 
 const Cont = styled.div`
   overflow: hidden;
+  width: 100%;
 `;
 
-const Paragraph = styled(motion.p)`
-  font-size: 20px;
-  font-weight: 400;
+const Text = styled(motion.h1)`
+  font-size: calc(32px + 2.5vw);
+  font-weight: 700;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
 `;

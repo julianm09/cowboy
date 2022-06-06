@@ -40,12 +40,12 @@ export const Scene = ({ scrollTop, position, windowSize }) => {
         <pointLight position={[-10, -10, 10]} />
         <pointLight
           position={[-10, -10, 100]}
-          color={"#FF9900"}
-          intensity={10}
+          color={themes[theme].primary}
+          intensity={5}
         />
         <Cactus px={5} py={-5} pz={-10} ry={1} scrollTop={scrollTop} />
         <Cactus px={-10} py={-5} pz={-30} ry={2} scrollTop={scrollTop} />
       </Suspense>
     </Canvas>
   );
-}
+};

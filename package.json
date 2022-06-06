@@ -10,6 +10,7 @@
   "dependencies": {
     "@react-three/drei": "^8.3.1",
     "@react-three/fiber": "^7.0.24",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^6.3.10",
     "lerp": "^1.0.3",
     "next": "12.1.6",

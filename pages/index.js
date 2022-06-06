@@ -9,13 +9,19 @@ import { Text } from "../comps/text/Text";
 import { useState, useEffect } from "react";
 import { Scene } from "../comps/Scene";
 import { Cursor } from "../comps/Cursor";
-
+import { Grid } from "../comps/Grid";
+import { Card } from "../comps/Card";
+import { H2 } from "../comps/text/H2";
+import ContactForm from "../comps/ContactForm";
+import { themes } from "../utils/variables";
+import { useTheme } from "../utils/provider";
 
 export default function Home() {
   const scrollTop = useScrollTop();
   const windowSize = useWindowSize();
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [hovering, setHovering] = useState(false);
+  const [hovering] = useState(false);
+  const {theme} = useTheme();
 
   return (
     <>
@@ -48,13 +54,43 @@ export default function Home() {
             transition={{ delay: 0, duration: 1 }}
           />
           <Text
-            text="We are a digital design team focused on creating unique and interactive experiences for businesses."
+            text="We are a digital design team focused on creating unique and interactive experiences for small businesses."
             style={{ marginBottom: "60px" }}
             transition={{ delay: 0.5, duration: 1 }}
           />
-          <Button />
+          <Button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 100 }}
+            transition={{ delay: 2, duration: 6 }}
+          />
         </Section>
-        <Section></Section>
+        <Section>
+          <H2
+            text="What We Offer"
+            style={{ marginBottom: "20px" }}
+            transition={{ delay: 2.5, duration: 1 }}
+          />
+          <Text
+            text="We provide a variety of different services including:"
+            style={{ marginBottom: "60px" }}
+            transition={{ delay: 3, duration: 1 }}
+          />
+        </Section>
+        <Section>
+          <ContactForm color={themes[theme]}/>
+        </Section>
+{/*         <Section>
+          <H2
+            text="Our Work"
+            style={{ marginBottom: "40px" }}
+            transition={{ delay: 0, duration: 1 }}
+          />
+          <Grid>
+            <Card />
+            <Card />
+            <Card />
+          </Grid>
+        </Section> */}
       </Container>
     </>
   );
@@ -70,5 +106,5 @@ const Container = styled.div`
 
 const Outline = styled.span`
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px;
+  -webkit-text-stroke: 1px;
 `;

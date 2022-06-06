@@ -28,6 +28,6 @@ const Cont = styled.div`
 `;
 
 const Text = styled(motion.h1)`
-  font-size: calc(32px + 6vw);
+  font-size: calc(32px + 5vw);
   font-weight: 700;
 `;
