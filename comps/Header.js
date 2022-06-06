@@ -30,5 +30,5 @@ const Container = styled.div`
 `;
 
 const Logo = styled.div`
-  font-family: "Plein";
+  font-family: "Plein-Variable";
 `;
